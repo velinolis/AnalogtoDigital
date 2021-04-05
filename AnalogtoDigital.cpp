@@ -23,8 +23,8 @@ AnalogtoDigital::AnalogtoDigital() {}
 
 void AnalogtoDigital::Convert_All() {
   int NPin[] = {14, 15, 16, 17};
-  int limite = (sizeof(NPin) / sizeof(NPin[0]));
-  for (int NPins = 0; NPins < limite; NPins++) {
+  int limit = (sizeof(NPin) / sizeof(NPin[0]));
+  for (int NPins = 0; NPins < limit; NPins++) {
     pinMode(NPin[NPins], OUTPUT);
     digitalWrite(NPin[NPins], LOW);
   }
