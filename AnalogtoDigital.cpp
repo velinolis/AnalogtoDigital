@@ -1,5 +1,3 @@
-
-
 /*
 ################################################################################################################
 AnalogtoDigital library
@@ -32,7 +30,6 @@ void AnalogtoDigital::Convert_All() {
   }
 }
 
-
 void AnalogtoDigital::Select_Pin(byte pin1, byte pin2, byte pin3, byte pin4) {
   _pin1 = pin1;
   _pin2 = pin2;
@@ -60,9 +57,6 @@ void AnalogtoDigital::Select_Pin(byte pin1, byte pin2, byte pin3, byte pin4) {
     digitalWrite(NPin[3], LOW);
   }
 }
-
-
-
 
 /*
   if (_pin1 > 1) _pin1 = 1;
