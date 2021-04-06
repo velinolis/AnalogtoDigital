@@ -1,7 +1,9 @@
 /*
-################################################################################################################
+########################################################
 AnalogtoDigital library
-Convert analog pins A0-A3 to digital pins, excluded I2C pins A4 and A5
+
+Convert analog pins A0-A3 to digital pins, 
+excluded I2C pins A4 and A5
 
   pin A0 = 14
   pin A1 = 15
@@ -10,10 +12,14 @@ Convert analog pins A0-A3 to digital pins, excluded I2C pins A4 and A5
   pin A4 = 18 --> I2C SDA
   pin A5 = 19 --> I2C SCL
   
-Convert_All() --> convert all pins (A0-14, A1-15, A2-16, A3-17)
-Select_Pin()  --> select pin to convert (0/1/14, 0/1/15, 0/1/16, 0/1/17) 0-Analog/1-Digital/14-15-16-17-Digital
-N_Pins()      --> number of pins to convert (1-4)
-################################################################################################################
+Convert_All()
+Convert all pins (A0-14, A1-15, A2-16, A3-17)
+Select_Pin()
+Select pin to convert (0/1/14, 0/1/15, 0/1/16, 0/1/17),
+0-Analog/1-Digital/14-15-16-17-Digital
+N_Pins()     
+Number of pins to convert (1-4)
+########################################################
 */
 
 #include "AnalogtoDigital.h"
@@ -22,6 +28,7 @@ N_Pins()      --> number of pins to convert (1-4)
 AnalogtoDigital::AnalogtoDigital() {}
 
 void AnalogtoDigital::Convert_All() {
+  
   int NPin[] = {14, 15, 16, 17};
   int limit = (sizeof(NPin) / sizeof(NPin[0]));
   for (int NPins = 0; NPins < limit; NPins++) {
@@ -31,10 +38,12 @@ void AnalogtoDigital::Convert_All() {
 }
 
 void AnalogtoDigital::Select_Pin(byte pin1, byte pin2, byte pin3, byte pin4) {
+  
   _pin1 = pin1;
   _pin2 = pin2;
   _pin3 = pin3;
   _pin4 = pin4;
+  
   int NPin[] = {14, 15, 16, 17};
 
   if (_pin1 == 14 || _pin1 == 1) {
@@ -88,6 +97,7 @@ void AnalogtoDigital::Select_Pin(byte pin1, byte pin2, byte pin3, byte pin4) {
 */
 
 void AnalogtoDigital::N_Pins(byte numpin) {
+  
   _numpin = numpin;
   if (_numpin > 4) _numpin = 4;
   int NPin[] = {14, 15, 16, 17};
