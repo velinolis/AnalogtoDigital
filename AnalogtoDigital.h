@@ -1,6 +1,5 @@
 #ifndef ANALOGTODIGITAL_H
 #define ANALOGTODIGITAL_H
-#include "Arduino.h"
 
 class AnalogtoDigital
 {
